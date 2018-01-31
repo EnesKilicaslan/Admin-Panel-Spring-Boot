@@ -4,8 +4,12 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 import com.kilicaslan.enes.entity.User;
 
+
+@Repository
 public class UserDao {
 	
 	private static Map<Integer, User> users;
@@ -21,7 +25,7 @@ public class UserDao {
 		};
 	}
 	
-	public Collection<User> getStudents(){
+	public Collection<User> getUsers(){
 		return this.users.values();
 	}
 	
