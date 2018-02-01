@@ -13,7 +13,7 @@ Admin Panel can be able to do the followings:
 User is an entity, it has first name, last name, user name, password and role fields.
 
 ### What I have done until now
-- Spring Boot creates ret API, for adding, deleting and updating user
+- Spring Boot creates rest API, for adding, deleting and updating user
 
 
 ### How to run
@@ -21,7 +21,6 @@ User is an entity, it has first name, last name, user name, password and role fi
 Because this is a maven project, you can open the project with your IDE to see codes.
 There is a jar file named app, we can use it to see the project in action.
 Currently I am using stub( or fake ) database in DAO, so you don't need any configuration for DB.
-
 
 ***After downloaded and extracted the project from github run the following commands***
 
