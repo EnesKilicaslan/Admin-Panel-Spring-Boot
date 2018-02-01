@@ -31,3 +31,7 @@ cd Admin-Panel-Spring-Boot
 java -jar app.jar
 
 ```
+
+Then the project will run on tomcat server and will be available for various operations.
+You can use browser or postman.
+Go to browser and type **http://localhost:8080/users**, you will se list of users.
