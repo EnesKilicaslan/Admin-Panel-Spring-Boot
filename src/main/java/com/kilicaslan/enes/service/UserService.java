@@ -29,6 +29,10 @@ public class UserService {
 	}
 	
 	public List<User> getPage(int pageNumber) {
+		
+		if(pageNumber < 1)
+			pageNumber = 1;
+		
 		PageRequest request = new PageRequest(pageNumber - 1, PAGESIZE, Sort.Direction.ASC, "id");
 		return userDao.findAll(request).getContent();
 	}
