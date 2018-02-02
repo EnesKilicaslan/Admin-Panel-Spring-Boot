@@ -42,7 +42,11 @@ public class UserService {
 	}
 	
 	public void deleteUser(@PathVariable("id") int id) {
+		try {
 		userDao.delete(id);
+		} catch(Exception e) {
+			
+		}
 	}
 	
 	public void updateUser(@RequestBody User user) {
