@@ -59,10 +59,9 @@
 	<hr />
 	<br />
 	
-	
-	<div class="container">
+	<div class="container" id="usersTable">
 		<h1>Users Table</h1>
-		<table id="usersTable" class="table table-striped">
+		<table class="table table-striped">
 	      
 	       <!-- Header Table -->
 	       <thead>
@@ -76,19 +75,16 @@
 	            </tr>
 	        </thead>
 	        
-	        <tr th:each="user : ${users}">
-                 <td th:text="${user?.id}">1</td>
-                 <td th:text="${user?.firstName}">John</td>
-                 <td th:text="${user?.lastName}">Doe</td>
-                 <td th:text="${user?.userName}">Nobody knows!</td>
-                 <td th:text="${user?.password}">john@doe.com</td>
-                 <td th:text="${user?.role}">john@doe.com</td>
-            </tr>
-              
+	        <tfoot>
+	        
+	        </tfoot>
+	          
 	    </table>
 	
 	</div>
+	
 	<br />
+	<hr />
 	<br />
 	
 </body>
