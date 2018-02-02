@@ -1,13 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<title>Enes Kilicaslan Admin Panel</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+	<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+	<script src="/js/datatable.js"></script>
+
+	<style>
+	
+		h1, h2, h3, h4, h5, h6 {
+        		text-align: center;
+    		}
+    		
+    		.btn-space {
+		    margin-left: 15px;
+		}
+    	
+    	</style>
 </head>
+
 <body>
 
+	<h2> Admin Panel </h2>
+	<br />
+	<hr />
+	<br />
+ 	
+ 	<form id="add-user" class="form-inline" style="margin:20px 20px 20px 20px">
+ 		<label class="sr-only" for="firstname"></label>
+ 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="firstname" placeholder="First Name">
 
- <h2> Admin Panel</h2>
-
+		<label class="sr-only" for="lastname"></label>
+ 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="lastname" placeholder="Last Name">
+		
+ 		<label class="sr-only" for="username"></label>
+ 		<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+ 			<div class="input-group-addon">@</div>
+ 			<input type="text" class="form-control" id="username" placeholder="Username">
+ 		</div>
+ 		
+ 		<label class="sr-only" for="password"></label>
+ 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="password" placeholder="Password">
+		
+		<label class="sr-only" for="role"></label>
+ 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="role" placeholder="role">
+		
+  		<button type="submit" class="btn btn-primary btn-space">Add User</button>
+	</form>
+	
+	<br />
+	<hr />
+	<br />
+	
+	
+	<div class="container">
+		<h1>Users Table</h1>
+		<table id="usersTable" class="table table-striped">
+	      
+	       <!-- Header Table -->
+	       <thead>
+	            <tr>
+	                <th>Id</th>
+					<th>Name</th>
+	                <th>Last Name</th>
+	                <th>User Name</th>
+	                <th>Password</th>
+	                <th>Role</th>
+	            </tr>
+	        </thead>
+	        
+	        <tr th:each="user : ${users}">
+                 <td th:text="${user?.id}">1</td>
+                 <td th:text="${user?.firstName}">John</td>
+                 <td th:text="${user?.lastName}">Doe</td>
+                 <td th:text="${user?.userName}">Nobody knows!</td>
+                 <td th:text="${user?.password}">john@doe.com</td>
+                 <td th:text="${user?.role}">john@doe.com</td>
+            </tr>
+              
+	    </table>
+	
+	</div>
+	<br />
+	<br />
+	
 </body>
 </html>
