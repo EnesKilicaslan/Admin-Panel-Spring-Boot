@@ -23,6 +23,10 @@
 		    margin-left: 15px;
 		}
     	
+    		.center_div{
+		    margin: 0 auto;
+		    
+		}
     	</style>
 </head>
 
@@ -33,27 +37,31 @@
 	<hr />
 	<br />
  	
- 	<form id="add-user" class="form-inline" style="margin:20px 20px 20px 20px">
- 		<label class="sr-only" for="firstname"></label>
- 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="firstname" placeholder="First Name">
-
-		<label class="sr-only" for="lastname"></label>
- 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="lastname" placeholder="Last Name">
-		
- 		<label class="sr-only" for="username"></label>
- 		<div class="input-group mb-2 mr-sm-2 mb-sm-0">
- 			<div class="input-group-addon">@</div>
- 			<input type="text" class="form-control" id="username" placeholder="Username">
- 		</div>
- 		
- 		<label class="sr-only" for="password"></label>
- 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="password" placeholder="Password">
-		
-		<label class="sr-only" for="role"></label>
- 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="role" placeholder="role">
-		
-  		<button type="submit" class="btn btn-primary btn-space">Add User</button>
-	</form>
+ 	
+ 	<div class="container center_div">
+	 	<form id="add-user" class="form-inline" style="margin:20px 20px 20px 20px">
+	 		<label class="sr-only" for="firstname"></label>
+	 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="firstname" placeholder="First Name">
+	
+			<label class="sr-only" for="lastname"></label>
+	 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="lastname" placeholder="Last Name">
+			
+	 		<label class="sr-only" for="username"></label>
+	 		<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+	 			<div class="input-group-addon">@</div>
+	 			<input type="text" class="form-control" id="username" placeholder="Username">
+	 		</div>
+	 		
+	 		<label class="sr-only" for="password"></label>
+	 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="password" placeholder="Password">
+			
+			<label class="sr-only" for="role"></label>
+	 		<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="role" placeholder="role">
+			
+	  		<button type="submit" class="btn btn-primary btn-space">Add User</button>
+		</form>
+	
+	</div>
 	
 	<br />
 	<hr />
@@ -80,7 +88,14 @@
 	        </tfoot>
 	          
 	    </table>
-	
+
+		<nav aria-label="Page navigation example">
+		  <ul class="pagination">
+		  
+		    <li id="prevPage" class="page-item"><a class="page-link" >Previous</a></li>
+		    <li id="nextPage" class="page-item"><a class="page-link" >Next</a></li>
+		  </ul>
+		</nav>	
 	</div>
 	
 	<br />
