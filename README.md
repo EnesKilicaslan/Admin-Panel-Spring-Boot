@@ -1,7 +1,14 @@
 # Admin-Panel-Spring-Boot
 Creating admin panel with Spring Boot
 
-**This project is to manage the users**
+**This project is designed to manage the users**
+
+
+### Requirements:
+1. Mysql database
+2. Maven
+3. Java 1.8
+
 
 
 Admin Panel can be able to do the followings:
