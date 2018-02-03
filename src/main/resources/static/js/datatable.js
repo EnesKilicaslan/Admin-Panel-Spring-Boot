@@ -8,29 +8,34 @@ $(document).ready( function () {
 	//load first page of users
 	$("#prevPage").addClass("inactiveLink");
 	console.log("2");
+	console.log("2");
 	
 	
-	$("#nextPage").click(function(){
+	$("#nextPage").on("click", function(e){
+		console.log("09");
 		page = page +1;
 		updateTable(page);
-		$("#prevPage").removeClass("inactiveLink"); 
+		$("#prevPage").removeClass("inactiveLink"); // make prev button active
+		return false;
 	});
 	
-	$("#prevPage").click(function(){
-		
+	
+	
+	$("#prevPage").on("click", function(e){
+		console.log("2");
 		if(page > 1 ){
 			page = page - 1;
 			updateTable(page);
 		}else{
 			$(this).addClass("inactiveLink");
 		}
+		return false;
 	});
 	
 	
 	// add user with ajax request
 	$( "#add-user" ).submit(function(event) {
 		
-
 		$.ajax( {
 				type: 'post',
 				url : window.location + "users",
@@ -44,13 +49,10 @@ $(document).ready( function () {
 			    		"password": $('#password').val(),
 			    		"role": $('#role').val(),
 			    }),
-			    
 		} );		
 		
 		event.preventDefault();
-		
 		document.getElementById("add-user").reset();
-		
 		updateTable(page);
 	});
 	

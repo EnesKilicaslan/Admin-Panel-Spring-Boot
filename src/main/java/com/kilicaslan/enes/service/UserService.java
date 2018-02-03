@@ -16,9 +16,9 @@ import com.kilicaslan.enes.entity.User;
 public class UserService {
 	
 	@Autowired
-	private UserDao userDao ;
+	private UserDao userDao;
 	
-	private final static int PAGESIZE = 3;
+	private final static int PAGESIZE = 7;
 	
 	public void save(User u) {
 		userDao.save(u);
