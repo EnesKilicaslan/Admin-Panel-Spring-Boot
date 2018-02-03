@@ -81,18 +81,18 @@ Because there is a REST api we can send various requests.
 
     1. To see the users page by page (like on the browser )
 
-            send **GET** request to url **http://localhost:8080/users/?page=1**
+            send GET request to url http://localhost:8080/users/?page=1
             you can change the page number
 
     2. To see a single user's informations via his id
 
-        send **GET** request to url **http://localhost:8080/users/2**
+        send GET request to url http://localhost:8080/users/2
         you can change the id of user
 
 
     3. To add a user
 
-        send **POST** request to url **http://localhost:8080/users**
+        send POST request to url http://localhost:8080/users
 
         - add a header, its key is ContentType, value is application/json
         - add a body like following
@@ -106,7 +106,7 @@ Because there is a REST api we can send various requests.
 
     4. To update a user
 
-        send **PUT** request to url **http://localhost:8080/users** with the user's id
+        send PUT request to url http://localhost:8080/users with the user's id
         - add a header, its key is ContentType, value is application/json
         - add a body like following
             {  "id": 2,
@@ -120,7 +120,7 @@ Because there is a REST api we can send various requests.
 
     5. To delete a user
 
-        send **DELETe** request to url **http://localhost:8080/users/2**
+        send DELETe request to url http://localhost:8080/users/2
         you can change the id of user
 
 
