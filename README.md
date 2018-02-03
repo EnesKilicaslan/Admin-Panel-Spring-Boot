@@ -20,9 +20,14 @@ This project supply an REST api to add, delete, update and retrieve users from d
 4. Jquery-Ajax requests to list, add and delete users without refreshing the page
 
 
+### How to open the project on IDE
+
+Because this is a maven project, you can open the project with your IDE to see codes.
+click File-> open project from file system , and select this project.
+
 ### How to run
 
-***Firstly, you must have a mysql db up and running.***
+***Firstly, you must have a mysql server up and running.***
 
 change your working directory to project folder
 ```sh
@@ -50,18 +55,17 @@ source some-path/Admin-Panel-Spring-Boot/create-user.sql;
 source some-path/Admin-Panel-Spring-Boot/table.sql;
 ```
 
-Because this is a maven project, you can open the project with your IDE to see codes.
-There is a jar file named app, we can use it to see the project in action.
+if you're ok till now, you can take a deep breath because we have one last step and
+ I am sure that you won't have any problem there.
 
-***After downloaded and extracted the project from github run the following commands***
+YAY!, We have a jar file named **app.jar**. We can use it to see the project in action.
 
+run the following command
 ```sh
-
-cd Admin-Panel-Spring-Boot
 java -jar app.jar
-
 ```
 
 Then the project will run on tomcat server and will be available for various operations.
+
 You can use browser or postman.
 Go to browser and type **http://localhost:8080/users**, you will se list of users.
