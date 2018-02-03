@@ -10,24 +10,35 @@ Creating admin panel with Spring Boot
 3. Java 1.8
 
 
+This project supply an REST api to add, delete, update and retrieve users from database.
 
-Admin Panel can be able to do the followings:
-- retrieve users
-- add user
-- delete user
-- update user
 
-User is an entity, it has first name, last name, user name, password and role fields.
-
-### What I have done until now
-- Spring Boot creates rest API, for adding, deleting and updating user
+### Things Done
+1. Restfull controller
+2. Mysql database connection
+3. Pagination on Spring Boot
+4. Jquery-Ajax requests to list, add and delete users without refreshing the page
 
 
 ### How to run
 
+***Firstly, you must have a mysql db up and running.***
+
+you can run mysql server on mac via following command
+```sh
+mysql.server start
+```
+
+now you need to login
+```sh
+mysql -u root -p
+```
+then type your password
+
+
+
 Because this is a maven project, you can open the project with your IDE to see codes.
 There is a jar file named app, we can use it to see the project in action.
-Currently I am using stub( or fake ) database in DAO, so you don't need any configuration for DB.
 
 ***After downloaded and extracted the project from github run the following commands***
 
